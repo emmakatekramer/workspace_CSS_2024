@@ -1,0 +1,41 @@
+/* style file created by Emma Kramer
+====================================
+00: css variable
+01: color
+02: typography
+====================================
+*/
+
+/* 00: css variable */
+:root{
+    --body-color: hsl(0, 73%, 13%);
+    --page-color: hsla(23, 100%, 75%, 0.844);
+    --sidebar-color: hsla(30, 100%, 88%, 0.8);
+    /* font color */
+    --font-color: rgb(28, 7, 5);
+    --sidebar-font-color: rgb(95, 8, 0);
+    /* h1 color */
+    --h1-color: hsl(8, 64%, 16%);
+}
+
+/* 01 Color */
+body{
+    background-color: var(--body-color);
+    color: var(--font-color);
+}
+
+#zen-intro{
+    background-color: var(--page-color);
+}
+
+#zen-supporting{
+    background-color: var(--page-color);
+}
+
+.sidebar{
+    background-color: var(--sidebar-color);
+}
+
+h1{
+    color: var(--h1-color);
+}
