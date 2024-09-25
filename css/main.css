@@ -9,13 +9,18 @@
 /* 00: css variable */
 :root{
     --body-color: hsl(0, 73%, 13%);
-    --page-color: hsla(23, 100%, 75%, 0.844);
-    --sidebar-color: hsla(30, 100%, 88%, 0.8);
+    --page-color: hsla(349, 100%, 80%, 0.557);
+    --sidebar-color: hsl(0, 100%, 92%);
     /* font color */
     --font-color: rgb(28, 7, 5);
     --sidebar-font-color: rgb(95, 8, 0);
     /* h1 color */
     --h1-color: hsl(8, 64%, 16%);
+    /* layout variables */
+    --page-top-position: 85%;
+    --page-width: 20%;
+    --bottom-bar-height: 15vh;
+    --bottom-bar-color: hsl(0, 44%, 29%);
 }
 
 /* 01 Color */
@@ -38,4 +43,104 @@ body{
 
 h1{
     color: var(--h1-color);
+}
+
+/* 02 Layout */
+div.explanation,div.requirements,div.benefits,div.participation{
+    position: fixed;
+    width: var(--page-width);
+    top: var(--page-top-position);
+    background-image: url(../img/newspaper3.jpg);
+}
+
+div.explanation{
+    left: 0%;
+}
+
+div.requirements{
+    left: 20%;
+}
+
+div.benefits{
+    left: 40%;
+}
+
+div.participation{
+    left: 60%;
+}
+
+aside.sidebar{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    height: 80%;
+    padding: 8px;
+}
+
+section.intro{
+    position: fixed;
+    top: 0;
+    bottom: 10%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    padding: 4px;
+    border: 2px solid var(--page-color);
+    margin-top: 25px;
+    text-indent: 1em; /* -9999 con remove all of the content */
+}
+
+div.extra2{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bottom-bar-height);
+    background-color: var(--bottom-bar-color);
+    z-index: -1;
+}
+
+div.extra1{
+    position: fixed;
+    top: 0;
+    bottom: 10%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    background-image: url(../img/newspaper2.jpg);
+    z-index: -1;
+
+}
+
+/* create tabs for the folders */
+div.explanation h3,div.requirements h3,div.benefits h3,div.participation h3{
+    margin-top: -5%;
+    width: 12vw;
+    background-color: var(--page-color);
+}
+
+/** 03: Typography **/
+@font-face {
+    font-family: 'myfont';
+    src: url(../fonts/chunkfive.eot);
+}
+
+header h1{
+    font-family: 'myfont',sans-serif;
+    font-weight: 100;
+    font-size: 1.25em;
+    letter-spacing: normal;
+    line-height: 1em;
+}
+
+header h2{
+    font-family: 'Edu AU VIC WA NT Hand',cursive;
+    font-weight: 100;
+
+}
+
+#design-archives {
+    visibility: hidden;
 }
