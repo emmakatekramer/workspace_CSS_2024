@@ -13,13 +13,14 @@
     --sidebar-color: hsl(0, 100%, 92%);
     /* font color */
     --font-color: rgb(28, 7, 5);
+    --font-color2: rgb(255, 242, 241);
     --sidebar-font-color: rgb(95, 8, 0);
     /* h1 color */
     --h1-color: hsl(8, 64%, 16%);
     /* layout variables */
     --page-top-position: 85%;
     --page-width: 20%;
-    --bottom-bar-height: 15vh;
+    --bottom-bar-height: 14vh;
     --bottom-bar-color: hsl(0, 44%, 29%);
 }
 
@@ -27,6 +28,11 @@
 body{
     background-color: var(--body-color);
     color: var(--font-color);
+}
+
+div.preamble{
+    color: var(--font-color2);
+    margin-right: 25%;
 }
 
 #zen-intro{
@@ -99,7 +105,7 @@ div.extra2{
     width: 100%;
     height: var(--bottom-bar-height);
     background-color: var(--bottom-bar-color);
-    z-index: -1;
+    z-index: 1;
 }
 
 div.extra1{
@@ -119,6 +125,8 @@ div.explanation h3,div.requirements h3,div.benefits h3,div.participation h3{
     margin-top: -5%;
     width: 12vw;
     background-color: var(--page-color);
+    border-radius: 8px 8px 0 0;
+    padding-left: 4px;
 }
 
 /** 03: Typography **/
@@ -136,11 +144,59 @@ header h1{
 }
 
 header h2{
-    font-family: 'Edu AU VIC WA NT Hand',cursive;
+    font-family: 'Baskervville SC',cursive;
     font-weight: 100;
+    font-size: 2.5em;
 
 }
 
 #design-archives {
     visibility: hidden;
 }
+
+/* 04, selector practice, transform, transition, ... */
+a:hover{
+    font-size: 1em;
+
+}
+
+div.explanation:active{
+    top: 15vh;
+    height: 90vh;
+
+}
+
+div.requirements:hover{
+    top: 15vh;
+    height: 90vh;
+}
+
+div.benefits:active{
+    top: 15vh;
+    height: 90vh;
+}
+
+div.participation:active{
+    top: 15vh;
+    height: 90vh;
+}
+
+p::first-letter{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+p:nth-child(2n){
+    background-color: rgb(114, 1, 52);
+}
+
+p:nth-child(2n+1){
+    background-color: rgb(206, 131, 166);
+}
+
+h3{
+    text-shadow: 2px 2px 10px var(--font-color2);
+}
+
+
+    
