@@ -57,6 +57,8 @@ div.explanation,div.requirements,div.benefits,div.participation{
     width: var(--page-width);
     top: var(--page-top-position);
     background-image: url(../img/newspaper3.jpg);
+    /* transition: all 4s ease in-out;*/
+    transition: all 2s ease-in-out;
 }
 
 div.explanation{
@@ -96,6 +98,10 @@ section.intro{
     border: 2px solid var(--page-color);
     margin-top: 25px;
     text-indent: 1em; /* -9999 con remove all of the content */
+    background-image: url(/img/newspaper3.jpg);
+    /* put tranform and translate here */
+    transform: rotate(-10deg) translate(-100px,0);
+    
 }
 
 div.extra2{
@@ -117,6 +123,7 @@ div.extra1{
     height: 20%;
     background-image: url(../img/newspaper2.jpg);
     z-index: -1;
+    transform: rotate(15deg) translate(200px,-100px);
 
 }
 
@@ -197,6 +204,92 @@ p:nth-child(2n+1){
 h3{
     text-shadow: 2px 2px 10px var(--font-color2);
 }
+/** border radius for the tabs **/
 
 
+
+
+
+/** list style image **/
+ul{
+    list-style-image: url(../img/star.png);
+}
     
+/** transform and tranlate**/
+section.intro h3 ~p{
+    transition: all 3 ease-in-out;
+    opacity:1;
+    
+}
+
+
+section.intro h3:hover ~p{
+    transform: scale(0.2);
+    opacity:0;
+
+}
+
+@keyframes backandforth{
+    from{transform: translate(-800px,0);}
+    30%{transform: translate(-500px,0);}
+    50%{transform: translate(100px,0);}
+    70%{transform: translate(500px,0);}
+    90%{transform: translate(800,0);}
+}
+
+footer{
+    position: fixed;
+    bottom: 1vh;
+    left: 50%;
+    animation: 10s ease-in-out 2s alternate infinite backandforth;
+    z-index: 4;
+}
+
+/* fun features */
+
+
+aside.sidebar{
+    clip-path: polygon(0 0, 0 60%,50% 90%,100% 60%,100% 0);
+}
+
+div{
+    background-color:  hsla(200,50%,70%,0.3);
+  }
+  
+  .wrapper {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 100px  repeat(2, 1fr) 100px;
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  
+  .one{
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+  
+  .two{
+    grid-column: 1/ 4;
+    grid-row: 1/2;
+  }
+  
+  .three{
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  
+  .four{
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+  
+  .five{
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+  
+  .six{
+    grid-column: 3/5;
+    grid-row: 3/5;
+  }
