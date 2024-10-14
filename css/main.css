@@ -252,18 +252,7 @@ aside.sidebar{
     clip-path: polygon(0 0, 0 60%,50% 90%,100% 60%,100% 0);
 }
 
-div{
-    background-color:  hsla(200,50%,70%,0.3);
-  }
-  
-  .wrapper {
-    background-color: white;
-    display: grid;
-    grid-template-columns: 100px  repeat(2, 1fr) 100px;
-    grid-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
-  }
-  
+
   .one{
     grid-column: 2/4;
     grid-row: 2/4;
